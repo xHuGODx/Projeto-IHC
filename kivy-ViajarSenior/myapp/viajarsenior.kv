@@ -1,0 +1,788 @@
+#:kivy 1.0.9
+
+HomeScreen:
+
+<HomeScreen@BoxLayout>:
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Button:
+            text: "Viajar de Comboio"
+            on_press: root.go_to_screen1()
+        Button:
+            text: "Perfil"
+            on_press: root.go_to_screen20()
+        Button:
+            text: "Sugestoes de Viagens"
+            on_press: root.go_to_screen21()
+        Button:
+            text: "Os seus Bilhetes"
+            on_press: root.go_to_screen22()
+        Button:
+            text: "Bilhete de Volta"
+            on_press: root.go_to_screen30()
+
+<AjudaHomeScreen>:
+    id: pphomescreen
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Menu Principal"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: pphomescreen.dismiss()
+            size_hint: 1,.2
+
+<Screen1>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Escolha a localização de Partida"
+        Button:
+            text: "Usar Localização Atual"
+            on_press: root.go_to_screen2()
+        Button:
+            text: "Usar Outra Localização"
+            on_press: root.go_to_screen3()
+        Button:
+            text: "Cancelar"
+            on_press: root.go_to_screen0()
+
+<AjudaScreen1>:
+    id: ppscreen1
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Localização"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen1.dismiss()
+            size_hint: 1,.2
+
+<Screen2>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Insira o seu Destino"
+        TextInput:
+            id: destino
+            multiline: False
+        Label:
+            text: "Escolha a sua hora de partida"
+        BoxLayout:
+            orientation: "horizontal"
+            TextInput:
+                id: hora
+                multiline: False
+            Label:
+                text: ":"
+            TextInput:
+                id: minuto
+                multiline: False
+        Button:
+            text: "Continuar"
+            on_press: root.go_to_screen4()
+        Button:
+            text: "Cancelar"
+            on_press: root.go_to_screen0()
+
+<AjudaScreen2>:
+    id: ppscreen2
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Destino"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen2.dismiss()
+            size_hint: 1,.2
+
+<Screen3>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Insira a Localização da Qual deseja Partir"
+        TextInput:
+            id: localizacao
+            multiline: False
+        Button:
+            text: "Continuar"
+            on_press: root.go_to_screen2()
+        Button:
+            text: "Cancelar"
+            on_press: root.go_to_screen0()
+
+<AjudaScreen3>:
+    id: ppscreen3
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Localização"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen3.dismiss()
+            size_hint: 1,.2
+
+<Screen4>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            size_hint_y: 0.15
+            text: "Escolha o seu Bilhete"
+        ClickableBoxLayout:
+            on_press: root.go_to_screen5()
+        BoxLayout:
+            size_hint_y: 0.2
+            orientation: "horizontal"
+            Button:
+                text: "Filtros"
+                on_press: root.go_to_screen10()
+            Button:
+                text: "Cancelar"
+                on_press: root.go_to_screen0()
+
+<AjudaScreen4>:
+    id: ppscreen4
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Escolha Bilhete"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen4.dismiss()
+            size_hint: 1,.2
+
+<Screen5>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Confirme a sua seleção"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: .8,.8
+            Label:
+                text: "Preço: "
+            Label:
+                text: "Origem: "
+            Label:
+                text: "Destino: "
+            Label:
+                text: "Hora de Partida: "
+            Button:
+                text: "Mais detalhes"
+                on_press: root.go_to_screen7()
+                size_hint: None,None
+                width: "110dp"
+                height: "70dp"
+                pos_hint: {"right": 1}
+        Label:
+            text: "Numero de bilhetes a emitir"
+        TextInput:
+            id: bilhetes
+            multiline: False
+        BoxLayout:
+            orientation: "horizontal"
+            Button:
+                text: "Continuar"
+                on_press: root.go_to_screen6()
+            Button:
+                text: "Cancelar"
+                on_press: root.go_to_screen0()
+
+<AjudaScreen5>:
+    id: ppscreen5
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Confirmação"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen5.dismiss()
+            size_hint: 1,.2
+
+<Screen6>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Está a emitir N bilhetes do tipo:"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: .8,.8
+            Label:
+                text: "Preço: "
+            Label:
+                text: "Origem: "
+            Label:
+                text: "Destino: "
+            Label:
+                text: "Hora de Partida: "
+            Button:
+                text: "Mais detalhes"
+                on_press: root.go_to_screen7()
+                size_hint: None,None
+                width: "110dp"
+                height: "70dp"
+                pos_hint: {"right": 1}
+        BoxLayout:
+            orientation: "horizontal"
+            Button:
+                text: "Emitir Bilhetes"
+                on_press: root.go_to_screen8()
+            Button:
+                text: "Cancelar"
+                on_press: root.go_to_screen0()
+
+<AjudaScreen6>:
+    id: ppscreen6
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Emitir Bilhetes"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen6.dismiss()
+            size_hint: 1,.2
+
+<Screen7>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Detalhes do Bilhete"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: .8,.8
+            Label:
+                text: "Preço: "
+            Label:
+                text: "Origem: "
+            Label:
+                text: "Destino: "
+            Label:
+                text: "Hora de Partida: "
+            Label:
+                text: "Hora de Chegada: "
+            Label:
+                text: "Duração da Viagem: "
+            Label:
+                text: "Tipo de Comboio: "
+            Label:
+                text: "Classe: "
+            Label:
+                text: "Lugares Disponiveis: "
+        Button:
+            text: "Voltar"
+            on_press: root.go_back()
+
+<AjudaScreen7>:
+    id: ppscreen7
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Detalhes Bilhete"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen7.dismiss()
+            size_hint: 1,.2
+
+<Screen8>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Emitiu N bilhetes do tipo:"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: .8,.8
+            Label:
+                text: "Preço: "
+            Label:
+                text: "Origem: "
+            Label:
+                text: "Destino: "
+            Label:
+                text: "Hora de Partida: "
+            Button:
+                text: "Mais detalhes"
+                on_press: root.go_to_screen7()
+                size_hint: None,None
+                width: "110dp"
+                height: "70dp"
+                pos_hint: {"right": 1}
+        Label:
+            text: "Deseja pagar os bilhetes por MBway ou realizar o pagamento na estação?"
+        BoxLayout:
+            orientation: "horizontal"
+            Button:
+                text: "Pagar por MBway"
+                on_press: root.go_to_screen9()
+            Button:
+                text: "Pagar na Estação"
+                on_press: root.go_estacao()
+        Button:
+            text: "Cancelar"
+            on_press: root.go_to_screen0()
+
+<AjudaScreen8>:
+    id: ppscreen8
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Emitir Bilhetes"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen8.dismiss()
+            size_hint: 1,.2
+
+<EstacaoPopup>:
+    id: estacaopopup
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Estação"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever yapping sobre ter ate 5 horas antes da partida para pagar na estação"
+        Button:
+            text: "Fechar"
+            on_press: estacaopopup.dismiss()
+            size_hint: 1,.2
+
+<Screen9>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Pagamento por MBway"
+        Label:
+            text: "Insira o seu número de telemóvel"
+        TextInput:
+            id: telemovel
+            multiline: False
+        Button:
+            text: "Pagar"
+            on_press: root.go_pagar()
+        Button:
+            text: "Cancelar"
+            on_press: root.go_to_screen0()
+
+<AjudaScreen9>:
+    id: ppscreen9
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Pagamento MBway"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen9.dismiss()
+            size_hint: 1,.2
+
+<PagarPopup>:
+    id: pagarpopup
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Pagamento"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever yapping mbway"
+        Button:
+            text: "Fechar"
+            on_press: pagarpopup.dismiss()
+            size_hint: 1,.2
+
+<Screen10>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Filtros"
+        BoxLayout:
+            orientation: "vertical"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox1
+                Label:
+                    text: "Lugares Reservados Idosos"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox2
+                Label:
+                    text: "Lugares Reservados Crianças"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox3
+                Label:
+                    text: "Lugares Reservados Deficientes"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox4
+                Label:
+                    text: "Tem Casa de Banho"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox5
+                Label:
+                    text: "Tem Wi-Fi"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox6
+                Label:
+                    text: "Tipo Comboio: A"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox7
+                Label:
+                    text: "Tipo Comboio: B"
+        Label:
+            text: "Ordenação"
+        BoxLayout:
+            orientation: "horizontal"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox8
+                Label:
+                    text: "Mais Caro"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox9
+                Label:
+                    text: "Mais Barato"
+        BoxLayout:
+            orientation: "horizontal"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox10
+                Label:
+                    text: "Maior Duração"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox11
+                Label:
+                    text: "Menor Duração"
+        BoxLayout:
+            orientation: "horizontal"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox12
+                Label:
+                    text: "Mais Lugares Disponiveis"
+            BoxLayout:
+                orientation: "horizontal"
+                CheckBox:
+                    id: checkbox13
+                Label:
+                    text: "Menos Lugares Disponiveis"
+        BoxLayout:
+            orientation: "horizontal"
+            Button:
+                text: "Aplicar Filtros"
+                on_press: root.go_to_screen4()
+            Button:
+                text: "Cancelar"
+                on_press: root.go_back()
+
+<AjudaScreen10>:
+    id: ppscreen10
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Filtros"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen10.dismiss()
+            size_hint: 1,.2
+
+<Screen12>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "A sua ultima viagem:"
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Origem: X"
+            Label:
+                text: "Destino: Y"
+        Label:
+            text: "Deseja emitir o bilhete de regresso?"
+        Button:
+            text: "Continuar"
+            on_press: root.go_to_screen13()
+        Button:
+            text: "Cancelar"
+            on_press: root.go_to_screen0()
+
+<AjudaScreen12>:
+    id: ppscreen12
+    size_hint: .8,.4
+    auto_dismiss: False
+    title: "Ajuda Bilhete de Volta"
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Escrever ajuda"
+        Button:
+            text: "Fechar"
+            on_press: ppscreen12.dismiss()
+            size_hint: 1,.2
+
+<Screen13>
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Está a emitir 1 bilhete com:"
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Origem: Y"
+            Label:
+                text: "Destino: X"
+        Label:
+            text: "Insira a hora de Partida"
+        BoxLayout:
+            orientation: "horizontal"
+            TextInput:
+                id: hora
+                multiline: False
+            Label:
+                text: ":"
+            TextInput:
+                id: minuto
+                multiline: False
+        Button:
+            text: "Continuar"
+            on_press: root.go_to_screen4()
+        Button:
+            text: "Cancelar"
+            on_press: root.go_to_screen0()
+
+<Screen20>:
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Nome"
+            Label:
+                text: "Email"
+        Button:
+            text: "Dados Pessoais"
+        Button:
+            text: "Viagens Favoritas"
+        Button:
+            text: "Viagens Recentes"
+            on_press: root.go_to_screen23()
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Sugestões de Viagens:"
+            CheckBox:
+                active: True
+        Button:
+            text: "Voltar"
+            on_press: root.go_back()
+
+<Screen21>:
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Ajuda!"
+            on_press: root.ajuda_func()
+            size_hint: None,None
+            width: "110dp"
+            height: "70dp"
+            pos_hint: {"right": 1}
+        Label:
+            text: "Sugestões de Viagens"
+        ClickableBoxLayout:
+            on_press: root.go_to_screen5()
+        Button:
+            text: "Voltar"
+            on_press: root.go_back()
+
+
+
+<ClickableBoxLayout@ButtonBehavior+BoxLayout>:
+    orientation: 'vertical'
+    Label:
+        size_hint_y: 0.2
+        text: "Informações do Bilhete"
+    BoxLayout:
+        size_hint_y: 0.8
+        orientation: "vertical"
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Preço: 10€"
+            Label:
+                text: "Origem: Aveiro"
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Destino: Porto"
+            Label:
+                text: "Hora de Partida: 10:00"
+        BoxLayout:
+            orientation: "vertical"
+            Label:
+                text: "Tipo de Comboio: Intercidades"
+            Label:
+                text: "Classe: Econômica"
+            Label:
+                text: "Lugares Disponíveis: 20"
+
+<Label>:
+    font_size: min(root.width, root.height) / 5

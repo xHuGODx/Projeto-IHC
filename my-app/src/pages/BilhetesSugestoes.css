@@ -1,0 +1,73 @@
+/* Bilhetes.css */
+.bilhetes-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(220, 220, 220);
+  z-index: 1000;
+  padding: 10px 0;
+  text-align: left;
+  font-family: 'Arial, sans-serif';
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(220, 220, 220);
+  z-index: 1000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  height: 145px;
+}
+
+.bilhetes-container {
+  flex: 1;
+  margin-top: 50px;
+  margin-bottom: 135px;
+  overflow-y: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(220, 220, 220);
+}
+
+.bilhete {
+  display: block;
+  background-color: #ffffff;
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bilhete p {
+  margin: 5px 0;
+}
+
+.filter-button {
+  position: fixed;
+  bottom: 10px;
+  left: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px outset #218838;
+  width: 40%;
+}
+
+.filter-button:hover {
+  background-color: #218838;
+}

@@ -1,0 +1,72 @@
+/* Perfil.css */
+.perfil-container {
+  font-family: 'Arial, sans-serif';
+  padding: 20px;
+}
+
+.dperfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.help-button {
+  float: right;
+}
+
+.user-info, .personal-data, .language-select {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #939393;
+}
+
+h2, h3 {
+  margin-bottom: 10px;
+}
+
+select {
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.signout-button{
+  width: 25%;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px outset #c82333;
+  background-color: #dc3545;
+  color: white;
+}
+
+.signout-button:hover {
+  background-color: #c82333;
+}
+
+.perfil-button {
+  font: Arial;
+  font-weight: bold;
+  width: 100%;
+  padding: 40px;
+  font-size: 24px;
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: 2px solid #6e6e6e;
+  background-color: rgba(255, 255, 255, 1);
+  color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

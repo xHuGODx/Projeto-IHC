@@ -1,0 +1,21 @@
+/* BilhetesAtivos.css */
+.viagensrecentes-container {
+    font-family: 'Arial, sans-serif';
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .bilhete {
+    display: block;
+    background-color: #ffffff;
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bilhete p {
+    margin: 5px 0;
+  }

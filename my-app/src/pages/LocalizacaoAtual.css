@@ -1,0 +1,74 @@
+/* LocalizacaoAtual.css */
+.localizacao-container {
+  font-family: 'Arial, sans-serif';
+  padding: 20px;
+  text-align: center;
+  background-image: url('../images/home_background1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.destino-input-container, .hora-partida-container {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #1e1e1e;
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 15px 40px 15px 15px;  /* Aumentar o padding à direita */
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.time-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-inputs span {
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+.confirm-button, .cancel-button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  height: 60px;
+}
+
+/* Classe para campos de entrada com erro */
+.input-error {
+  border-color: red;
+  background-color: #fdd;
+}
+
+/* Estilo para o ícone de erro */
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.error-icon {
+  position: absolute;
+  right: 10px;  /* Ajustar conforme necessário */
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+  font-size: 24px;  /* Ajustar conforme necessário */
+  pointer-events: none;  /* Ícone não interfere com cliques */
+}

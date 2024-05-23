@@ -1,0 +1,18 @@
+/* ConfirmButton.css */
+.confirm-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px outset #218838;
+    height: 60px;
+    font-weight: bold;
+  }
+  
+  .confirm-button:hover {
+    background-color: #218838;
+  }
+  

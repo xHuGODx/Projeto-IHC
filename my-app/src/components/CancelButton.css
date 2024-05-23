@@ -1,0 +1,19 @@
+/* CancelButton.css */
+.cancel-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    height: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px outset #c82333;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c82333;
+  }
+  
